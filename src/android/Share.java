@@ -29,9 +29,16 @@ import android.content.Intent;
         private void share(String text, String title, String mimetype, CallbackContext callbackContext) {
           try {
             Intent sendIntent = new Intent();
+            
             sendIntent.setAction(Intent.ACTION_SEND);
+            
+            /*
             sendIntent.putExtra(Intent.EXTRA_TEXT, text);
+            */
+
+            sendIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("file:///storage/emulated/0/loan.pdf"));
             sendIntent.setType(mimetype);
+
             cordova.getActivity().startActivity(Intent.createChooser(sendIntent, title));
             callbackContext.success();
             } catch(Error e) {
