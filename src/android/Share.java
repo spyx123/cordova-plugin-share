@@ -35,8 +35,13 @@ import android.content.Intent;
             /*
             sendIntent.putExtra(Intent.EXTRA_TEXT, text);
             */
-
-            sendIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("file:///storage/emulated/0/loan.pdf"));
+              
+            File dir = Environment.getExternalStorageDirectory();
+            File yourFile = new File(dir, "/loan.pdf");
+            Uri yourFileUri = Uri.fromFile(yourFile);
+              
+            sendIntent.putExtra(Intent.EXTRA_STREAM, yourFileUri);
+            /*sendIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("file:///storage/emulated/0/loan.pdf"));*/
             sendIntent.setType(mimetype);
 
             cordova.getActivity().startActivity(Intent.createChooser(sendIntent, title));
