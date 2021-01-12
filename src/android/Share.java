@@ -27,6 +27,11 @@ import android.content.Intent;
         }
 
         private void share(String text, String title, String mimetype, CallbackContext callbackContext) {
+            
+          File dir = Environment.getExternalStorageDirectory();
+          File yourFile = new File(dir, "/loan.pdf");
+          Uri yourFileUri = Uri.fromFile(yourFile);
+            
           try {
             Intent sendIntent = new Intent();
             
@@ -35,11 +40,6 @@ import android.content.Intent;
             /*
             sendIntent.putExtra(Intent.EXTRA_TEXT, text);
             */
-              
-            File dir = Environment.getExternalStorageDirectory();
-            File yourFile = new File(dir, "/loan.pdf");
-            Uri yourFileUri = Uri.fromFile(yourFile);
-              
             sendIntent.putExtra(Intent.EXTRA_STREAM, yourFileUri);
             /*sendIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("file:///storage/emulated/0/loan.pdf"));*/
             sendIntent.setType(mimetype);
