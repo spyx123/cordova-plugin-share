@@ -19,17 +19,7 @@ id="com.lapetov.share"
                 <param name="android-package" value="com.lapetov.share.Share"/>
             </feature>
         </config-file>
-        <source-file src="src/android/Share.java" target-dir="src/nl/madebymark/share" />
+        <source-file src="src/android/Share.java" target-dir="src/com/lapetov/share" />
      </platform>
-
-     <!-- ios -->
-     <platform name="ios">    
-         <config-file target="config.xml" parent="/*">
-             <feature name="Share">
-                 <param name="ios-package" value="MMShare" /> 
-             </feature>
-         </config-file>
-         <header-file src="src/ios/MMShare.h" />
-         <source-file src="src/ios/MMShare.m" />
-     </platform>
+     
 </plugin>
