@@ -8,6 +8,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import java.io.File;
 import android.os.Environment;
+import android.net.Uri;
 
 import android.content.Intent;
 
