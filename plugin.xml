@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
 xmlns:android="http://schemas.android.com/apk/res/android"
-id="nl.madebymark.share"
+id="com.lapetov.share"
     version="0.1.1">
     <name>Share</name>
     <description>Share</description>
@@ -16,7 +16,7 @@ id="nl.madebymark.share"
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Share" >
-                <param name="android-package" value="nl.madebymark.share.Share"/>
+                <param name="android-package" value="com.lapetov.share.Share"/>
             </feature>
         </config-file>
         <source-file src="src/android/Share.java" target-dir="src/nl/madebymark/share" />
