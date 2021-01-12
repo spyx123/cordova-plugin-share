@@ -1,0 +1,15 @@
+{
+  "name": "cordova-plugin-share1",
+  "version": "7.0.0-dev",
+  "description": "Cordova Share",
+  "cordova": {
+    "id": "cordova-plugin-share1",
+    "platforms": [
+      "android",
+      "browser",
+      "ios",
+      "osx",
+      "windows"
+    ]
+   }
+  }
